@@ -1,10 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opsistech</title>
+
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* VIDEO BACKGROUND */
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+/* SECTIONS */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Welcome!</h1>
-  <p>We are OPSISTECH</p>
+
+<!-- VIDEO -->
+<video id="video-bg" autoplay muted loop>
+  <source src="video1.mp4" type="video/mp4">
+</video>
+
+<!-- NAVBAR -->
+<header>
+  <nav>
+    <a href="#home" onclick="changeVideo('video1.mp4')">Home</a>
+    <a href="#about" onclick="changeVideo('video2.mp4')">About</a>
+    <a href="#services" onclick="changeVideo('video3.mp4')">Services</a>
+    <a href="#contact" onclick="changeVideo('video4.mp4')">Contact</a>
+  </nav>
+</header>
+
+<!-- SECTIONS -->
+<section id="home">
+  <div class="overlay">
+    <h1>OPSISTECH</h1>
+    <p>Engineering Vision into Reality</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="overlay">
+    <h1>About</h1>
+    <p>We build advanced machine vision and automation systems.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="overlay">
+    <h1>Services</h1>
+    <p>Automation, AI vision, industrial integration.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="overlay">
+    <h1>Contact</h1>
+    <p>Reach out for collaboration and projects.</p>
+  </div>
+</section>
+
+<script>
+function changeVideo(src) {
+  const video = document.getElementById("video-bg");
+  video.style.opacity = 0;
+
+  setTimeout(() => {
+    video.querySelector("source").src = src;
+    video.load();
+    video.play();
+    video.style.opacity = 1;
+  }, 300);
+}
+</script>
+
 </body>
 </html>
