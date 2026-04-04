@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Opsistech</title>
 
-<!-- CORRECT FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -28,19 +27,23 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+/* NAV */
 nav {
   display: flex;
-  gap: 60px;
-  padding: 18px;
+  gap: 40px;
+  padding: 15px;
+  flex-wrap: wrap; /* KEY FIX */
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
   color: black;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 500;
+  white-space: nowrap; /* prevents breaking */
 }
 
 /* HERO */
@@ -51,19 +54,19 @@ nav a {
   justify-content: center;
 }
 
-/* CENTER BOX */
+/* BOX */
 .box {
   background: #8f8f8f;
-  padding: 80px 60px;
+  padding: 60px 30px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   max-width: 900px;
 }
 
-/* MAIN TITLE */
+/* TITLE */
 h1 {
   font-family: "Instrument Serif", serif;
-  font-size: 72px;
+  font-size: 52px;
   letter-spacing: 2px;
   color: white;
   margin: 0 0 20px 0;
@@ -72,9 +75,29 @@ h1 {
 /* SUBTITLE */
 p {
   font-family: "Instrument Serif", serif;
-  font-size: 24px;
+  font-size: 20px;
   color: #eaeaea;
   margin: 0;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
 </style>
 </head>
