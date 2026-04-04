@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Opsistech</title>
 
+<!-- CORRECT FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Georgia", serif;
-  scroll-behavior: smooth;
-  color: white;
+  font-family: "Instrument Sans", sans-serif;
+  background: #f2f2f2;
 }
 
 /* HEADER */
@@ -19,7 +21,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,0.95);
+  background: white;
   display: flex;
   justify-content: center;
   z-index: 1000;
@@ -28,116 +30,72 @@ header {
 
 nav {
   display: flex;
-  gap: 40px;
-  padding: 15px;
+  gap: 60px;
+  padding: 18px;
 }
 
 nav a {
   text-decoration: none;
   color: black;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* VIDEO BACKGROUND */
-#video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  transition: opacity 0.5s ease;
-}
-
-/* SECTIONS */
-section {
+/* HERO */
+.hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* CENTER BOX */
+.box {
+  background: #8f8f8f;
+  padding: 80px 60px;
   text-align: center;
-  padding: 20px;
+  width: 80%;
+  max-width: 900px;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.4);
-  padding: 40px;
-}
-
+/* MAIN TITLE */
 h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-family: "Instrument Serif", serif;
+  font-size: 72px;
+  letter-spacing: 2px;
+  color: white;
+  margin: 0 0 20px 0;
 }
 
+/* SUBTITLE */
 p {
-  font-size: 18px;
+  font-family: "Instrument Serif", serif;
+  font-size: 24px;
+  color: #eaeaea;
+  margin: 0;
 }
 </style>
 </head>
 
 <body>
 
-<!-- VIDEO -->
-<video id="video-bg" autoplay muted loop>
-  <source src="video1.mp4" type="video/mp4">
-</video>
-
-<!-- NAVBAR -->
 <header>
   <nav>
-    <a href="#home" onclick="changeVideo('video1.mp4')">Home</a>
-    <a href="#about" onclick="changeVideo('video2.mp4')">About</a>
-    <a href="#services" onclick="changeVideo('video3.mp4')">Services</a>
-    <a href="#contact" onclick="changeVideo('video4.mp4')">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
-<!-- SECTIONS -->
-<section id="home">
-  <div class="overlay">
+<section class="hero">
+  <div class="box">
     <h1>OPSISTECH</h1>
     <p>Engineering Vision into Reality</p>
   </div>
 </section>
-
-<section id="about">
-  <div class="overlay">
-    <h1>About</h1>
-    <p>We build advanced machine vision and automation systems.</p>
-  </div>
-</section>
-
-<section id="services">
-  <div class="overlay">
-    <h1>Services</h1>
-    <p>Automation, AI vision, industrial integration.</p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="overlay">
-    <h1>Contact</h1>
-    <p>Reach out for collaboration and projects.</p>
-  </div>
-</section>
-
-<script>
-function changeVideo(src) {
-  const video = document.getElementById("video-bg");
-  video.style.opacity = 0;
-
-  setTimeout(() => {
-    video.querySelector("source").src = src;
-    video.load();
-    video.play();
-    video.style.opacity = 1;
-  }, 300);
-}
-</script>
 
 </body>
 </html>
