@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,22 +9,25 @@
     <meta name="geo.placename" content="Romania" />
     <meta name="description" content="Opsistech - Soluții avansate de Machine Vision și automatizări industriale în România. Inspecție vizuală și controlul calității." />
     <link rel="alternate" hreflang="ro-ro" href="https://opsistech.ro/" />
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Opsistech",
-      "url": "https://opsistech.ro",
-      "description": "Specialiști în Machine Vision și automatizare industrială în România.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "RO"
-      },
-      "knowsAbout": ["Machine Vision", "Industrial Automation", "Quality Control", "Artificial Intelligence"],
-      "areaServed": "Romania"
-    }
-    </script>
+
+```
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Opsistech",
+  "url": "https://opsistech.ro",
+  "description": "Specialiști în Machine Vision și automatizare industrială în România.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RO"
+  },
+  "knowsAbout": ["Machine Vision", "Industrial Automation", "Quality Control", "Artificial Intelligence"],
+  "areaServed": "Romania"
+}
+</script>
+```
+
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,75 +56,83 @@ nav { display: flex; justify-content: center; align-items: center; gap: 48px; pa
 nav a { text-decoration: none; font-family: "Instrument Sans", sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); transition: color 0.4s, opacity 0.4s; opacity: 0.88; }
 nav a:hover { opacity: 1; }
 header.scrolled nav a { color: var(--black); opacity: 1; }
+
+/* Language switcher — lives in the footer */
+.lang-switcher { display: flex; align-items: center; gap: 4px; }
+.lang-btn { font-family: “Instrument Sans”, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background: none; border: 1px solid var(–line); color: var(–mid); padding: 4px 10px; cursor: pointer; transition: all 0.2s; border-radius: 2px; }
+.lang-btn.active { color: var(–black); border-color: var(–black); }
+.lang-btn:hover { color: var(–black); border-color: var(–black); }
+
 #home { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
 #hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-#home::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; }
+#home::after { content: “”; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; }
 .hero-inner { position: relative; z-index: 2; }
 section:not(#home) { padding: 96px 40px; }
-section.gray { background: var(--gray); }
+section.gray { background: var(–gray); }
 .s-wrap { max-width: 960px; margin: 0 auto; }
-.s-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--mid); margin-bottom: 16px; }
-.s-title { font-family: "Instrument Serif", serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(--black); line-height: 1.1; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.s-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(–mid); margin-bottom: 16px; }
+.s-title { font-family: “Instrument Serif”, serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(–black); line-height: 1.1; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(–line); }
 .about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-.about-text p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 20px; }
+.about-text p { font-size: 16px; color: var(–mid); line-height: 1.8; margin-bottom: 20px; }
 .about-text p:last-child { margin-bottom: 0; }
 .values { list-style: none; }
-.values li { padding: 20px 0; border-bottom: 1px solid var(--line); display: flex; gap: 20px; align-items: flex-start; }
-.values li:first-child { border-top: 1px solid var(--line); }
-.v-n { font-family: "Instrument Serif", serif; font-size: 22px; color: var(--line); line-height: 1; flex-shrink: 0; width: 28px; padding-top: 2px; }
-.v-body strong { display: block; font-size: 14px; font-weight: 600; color: var(--black); margin-bottom: 3px; letter-spacing: 0.3px; }
-.v-body span { font-size: 14px; color: var(--mid); }
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.svc-item { padding: 36px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background 0.2s; }
+.values li { padding: 20px 0; border-bottom: 1px solid var(–line); display: flex; gap: 20px; align-items: flex-start; }
+.values li:first-child { border-top: 1px solid var(–line); }
+.v-n { font-family: “Instrument Serif”, serif; font-size: 22px; color: var(–line); line-height: 1; flex-shrink: 0; width: 28px; padding-top: 2px; }
+.v-body strong { display: block; font-size: 14px; font-weight: 600; color: var(–black); margin-bottom: 3px; letter-spacing: 0.3px; }
+.v-body span { font-size: 14px; color: var(–mid); }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(–line); border-left: 1px solid var(–line); }
+.svc-item { padding: 36px 28px; border-right: 1px solid var(–line); border-bottom: 1px solid var(–line); transition: background 0.2s; }
 .svc-item:hover { background: #ededea; }
-.svc-item h3 { font-family: "Instrument Serif", serif; font-size: 20px; font-weight: 400; color: var(--black); margin-bottom: 10px; line-height: 1.2; }
-.svc-item p { font-size: 14px; color: var(--mid); line-height: 1.65; }
+.svc-item h3 { font-family: “Instrument Serif”, serif; font-size: 20px; font-weight: 400; color: var(–black); margin-bottom: 10px; line-height: 1.2; }
+.svc-item p { font-size: 14px; color: var(–mid); line-height: 1.65; }
 .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.contact-info p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 40px; }
+.contact-info p { font-size: 16px; color: var(–mid); line-height: 1.8; margin-bottom: 40px; }
 .cdet { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-.cdet-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--black); min-width: 72px; padding-top: 2px; }
-.cdet-val { font-size: 15px; color: var(--mid); }
-.form label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
-.form input, .form textarea { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--line); font-size: 15px; font-family: "Instrument Sans", sans-serif; color: var(--black); background: transparent; outline: none; transition: border-color 0.2s; margin-bottom: 32px; display: block; }
-.form input:focus, .form textarea:focus { border-color: var(--black); }
+.cdet-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–black); min-width: 72px; padding-top: 2px; }
+.cdet-val { font-size: 15px; color: var(–mid); }
+.form label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–black); margin-bottom: 8px; }
+.form input, .form textarea { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(–line); font-size: 15px; font-family: “Instrument Sans”, sans-serif; color: var(–black); background: transparent; outline: none; transition: border-color 0.2s; margin-bottom: 32px; display: block; }
+.form input:focus, .form textarea:focus { border-color: var(–black); }
 .form textarea { resize: none; height: 80px; }
-.form button { font-family: "Instrument Sans", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); background: var(--black); border: none; padding: 16px 40px; cursor: pointer; transition: background 0.3s; width: 100%; }
+.form button { font-family: “Instrument Sans”, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–white); background: var(–black); border: none; padding: 16px 40px; cursor: pointer; transition: background 0.3s; width: 100%; }
 .form button:hover { opacity: 0.72; }
-footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.f-brand { font-family: "Instrument Serif", serif; font-size: 18px; color: var(--black); }
-.f-sub { font-size: 12px; color: var(--mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+footer { border-top: 1px solid var(–line); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.f-brand { font-family: “Instrument Serif”, serif; font-size: 18px; color: var(–black); }
+.f-sub { font-size: 12px; color: var(–mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
 .f-links { display: flex; gap: 32px; }
-.f-links a { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
-.f-links a:hover { color: var(--black); }
+.f-links a { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(–mid); text-decoration: none; transition: color 0.2s; }
+.f-links a:hover { color: var(–black); }
 .f-copy { font-size: 12px; color: #b0b0aa; }
 @media (max-width: 800px) {
-  .about-cols, .contact-cols { grid-template-columns: 1fr; gap: 40px; }
-  .svc-grid { grid-template-columns: 1fr 1fr; }
-  nav { gap: 28px; }
-  footer { flex-direction: column; align-items: flex-start; gap: 24px; }
-  .f-links { flex-wrap: wrap; gap: 20px; }
+.about-cols, .contact-cols { grid-template-columns: 1fr; gap: 40px; }
+.svc-grid { grid-template-columns: 1fr 1fr; }
+nav { gap: 28px; }
+footer { flex-direction: column; align-items: flex-start; gap: 24px; }
+.f-links { flex-wrap: wrap; gap: 20px; }
 }
 @media (max-width: 520px) {
-  .svc-grid { grid-template-columns: 1fr; }
-  nav { gap: 20px; padding: 18px 20px; }
-  section:not(#home) { padding: 72px 24px; }
-  footer { padding: 32px 24px; }
+.svc-grid { grid-template-columns: 1fr; }
+nav { gap: 16px; padding: 18px 20px; }
+section:not(#home) { padding: 72px 24px; }
+footer { padding: 32px 24px; }
 }
 </style>
+
 </head>
 <body>
 
 <header id="site-header">
   <div class="site-wordmark">
     <h1>OPSISTECH</h1>
-    <p>Engineering Vision into Reality</p>
+    <p data-en="Engineering Vision into Reality" data-ro="Transformăm Viziunea în Realitate">Engineering Vision into Reality</p>
   </div>
   <div class="header-divider"></div>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#home"     data-en="Home"     data-ro="Acasă">Home</a>
+    <a href="#about"    data-en="About"    data-ro="Despre">About</a>
+    <a href="#services" data-en="Services" data-ro="Servicii">Services</a>
+    <a href="#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
   </nav>
 </header>
 
@@ -131,87 +143,130 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   <div class="hero-inner"></div>
 </section>
 
+<!-- ABOUT -->
+
 <section id="about" class="gray">
   <div class="s-wrap">
-    <p class="s-label">Who We Are</p>
-    <h2 class="s-title">About</h2>
+    <p class="s-label" data-en="Who We Are" data-ro="Cine Suntem">Who We Are</p>
+    <h2 class="s-title" data-en="About" data-ro="Despre Noi">About</h2>
     <div class="about-cols">
       <div class="about-text">
-        <p>Opsistech is a technology firm built on a single conviction — that clear thinking and the right solutions can solve any challenge an organization faces.</p>
-        <p>Focused on machine vision and AI-driven inspection, solutions are designed for environments where precision, reliability, and performance are essential.</p>
-        <p>From automated inspection and high-accuracy measurement to robot guidance and intelligent tracking, systems operate seamlessly in real-world industrial conditions — at speed, at scale, and under pressure.</p>
-        <p>The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required.</p>
+        <p data-en="Opsistech is a technology firm built on a single conviction — that clear thinking and the right solutions can solve any challenge an organization faces."
+           data-ro="Opsistech este o companie de tehnologie fondată pe o singură convingere — că gândirea clară și soluțiile potrivite pot rezolva orice provocare cu care se confruntă o organizație.">
+          Opsistech is a technology firm built on a single conviction — that clear thinking and the right solutions can solve any challenge an organization faces.</p>
+        <p data-en="Focused on machine vision and AI-driven inspection, solutions are designed for environments where precision, reliability, and performance are essential."
+           data-ro="Axate pe machine vision și inspecție bazată pe inteligență artificială, soluțiile sunt concepute pentru medii în care precizia, fiabilitatea și performanța sunt esențiale.">
+          Focused on machine vision and AI-driven inspection, solutions are designed for environments where precision, reliability, and performance are essential.</p>
+        <p data-en="From automated inspection and high-accuracy measurement to robot guidance and intelligent tracking, systems operate seamlessly in real-world industrial conditions — at speed, at scale, and under pressure."
+           data-ro="De la inspecție automatizată și măsurare de înaltă precizie, până la ghidarea roboților și urmărire inteligentă, sistemele funcționează impecabil în condiții industriale reale — cu viteză, la scară și sub presiune.">
+          From automated inspection and high-accuracy measurement to robot guidance and intelligent tracking, systems operate seamlessly in real-world industrial conditions — at speed, at scale, and under pressure.</p>
+        <p data-en="The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required."
+           data-ro="Principiul călăuzitor rămâne simplu: cea mai bună tehnologie este invizibilă. Pur și simplu funcționează — constant, eficient și exact cum este necesar.">
+          The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required.</p>
       </div>
       <ul class="values">
-        <li><span class="v-n">01</span><div class="v-body"><strong>Precision</strong><span>Engineered to specification, every time.</span></div></li>
-        <li><span class="v-n">02</span><div class="v-body"><strong>Integrity</strong><span>Transparent and accountable at every stage.</span></div></li>
-        <li><span class="v-n">03</span><div class="v-body"><strong>Innovation</strong><span>Continuously investing in what's next.</span></div></li>
-        <li><span class="v-n">04</span><div class="v-body"><strong>Partnership</strong><span>Long-term relationships, not transactions.</span></div></li>
+        <li><span class="v-n">01</span><div class="v-body">
+          <strong data-en="Precision"  data-ro="Precizie">Precision</strong>
+          <span   data-en="Engineered to specification, every time." data-ro="Proiectat conform specificațiilor, de fiecare dată.">Engineered to specification, every time.</span>
+        </div></li>
+        <li><span class="v-n">02</span><div class="v-body">
+          <strong data-en="Integrity"  data-ro="Integritate">Integrity</strong>
+          <span   data-en="Transparent and accountable at every stage." data-ro="Transparent și responsabil în fiecare etapă.">Transparent and accountable at every stage.</span>
+        </div></li>
+        <li><span class="v-n">03</span><div class="v-body">
+          <strong data-en="Innovation" data-ro="Inovație">Innovation</strong>
+          <span   data-en="Continuously investing in what's next." data-ro="Investim continuu în ceea ce urmează.">Continuously investing in what's next.</span>
+        </div></li>
+        <li><span class="v-n">04</span><div class="v-body">
+          <strong data-en="Partnership" data-ro="Parteneriat">Partnership</strong>
+          <span   data-en="Long-term relationships, not transactions." data-ro="Relații pe termen lung, nu simple tranzacții.">Long-term relationships, not transactions.</span>
+        </div></li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
+
 <section id="services">
   <div class="s-wrap">
-    <p class="s-label">What We Do</p>
-    <h2 class="s-title">Services</h2>
+    <p class="s-label" data-en="What We Do" data-ro="Ce Facem">What We Do</p>
+    <h2 class="s-title" data-en="Services" data-ro="Servicii">Services</h2>
     <div class="svc-grid">
       <div class="svc-item">
-        <h3>Automated Inspection</h3>
-        <p>Detection of defects such as scratches, incorrect shapes, missing components, faulty electronics, and damaged packaging.<br>Replacement of manual inspection on production lines.</p>
+        <h3 data-en="Automated Inspection" data-ro="Inspecție Automatizată">Automated Inspection</h3>
+        <p  data-en="Detection of defects such as scratches, incorrect shapes, missing components, faulty electronics, and damaged packaging.<br>Replacement of manual inspection on production lines."
+            data-ro="Detectarea defectelor precum zgârieturi, forme incorecte, componente lipsă, electronică defectă și ambalaje deteriorate.<br>Înlocuirea inspecției manuale pe liniile de producție.">
+          Detection of defects such as scratches, incorrect shapes, missing components, faulty electronics, and damaged packaging.<br>Replacement of manual inspection on production lines.</p>
       </div>
       <div class="svc-item">
-        <h3>Robot Guidance</h3>
-        <p>Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation.</p>
+        <h3 data-en="Robot Guidance" data-ro="Ghidare Robotică">Robot Guidance</h3>
+        <p  data-en="Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation."
+            data-ro="Localizare și preluare precisă a obiectelor.<br>Potrivit pentru bin picking, asamblare auto și automatizarea logisticii.">
+          Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation.</p>
       </div>
       <div class="svc-item">
-        <h3>Measurement &amp; Metrology</h3>
-        <p>High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications.</p>
+        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
+        <p  data-en="High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications."
+            data-ro="Măsurare dimensională de înaltă precizie la nivel de micron.<br>Verificarea conformității pieselor cu specificațiile tehnice.">
+          High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications.</p>
       </div>
       <div class="svc-item">
-        <h3>Identification &amp; Tracking</h3>
-        <p>Reading of barcodes, QR codes, and serial numbers.<br>End-to-end product tracking across production and supply chains.</p>
+        <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
+        <p  data-en="Reading of barcodes, QR codes, and serial numbers.<br>End-to-end product tracking across production and supply chains."
+            data-ro="Citirea codurilor de bare, codurilor QR și numerelor de serie.<br>Urmărirea completă a produselor pe tot parcursul producției și al lanțului de aprovizionare.">
+          Reading of barcodes, QR codes, and serial numbers.<br>End-to-end product tracking across production and supply chains.</p>
       </div>
       <div class="svc-item">
-        <h3>AI-Based Analysis</h3>
-        <p>Deep learning-based detection of complex patterns, subtle defects, and object classification beyond traditional rule-based methods.</p>
+        <h3 data-en="AI-Based Analysis" data-ro="Analiză Bazată pe IA">AI-Based Analysis</h3>
+        <p  data-en="Deep learning-based detection of complex patterns, subtle defects, and object classification beyond traditional rule-based methods."
+            data-ro="Detectarea bazată pe deep learning a tiparelor complexe, defectelor subtile și clasificarea obiectelor, depășind metodele tradiționale bazate pe reguli.">
+          Deep learning-based detection of complex patterns, subtle defects, and object classification beyond traditional rule-based methods.</p>
       </div>
       <div class="svc-item">
-        <h3>Industries Served</h3>
-        <p>Automotive.<br>Electronics.<br>Food &amp; beverage.<br>Logistics.<br>Pharmaceuticals.</p>
+        <h3 data-en="Industries Served" data-ro="Industrii Deservite">Industries Served</h3>
+        <p  data-en="Automotive.<br>Electronics.<br>Food &amp; beverage.<br>Logistics.<br>Pharmaceuticals."
+            data-ro="Auto.<br>Electronică.<br>Alimentar &amp; băuturi.<br>Logistică.<br>Farmaceutică.">
+          Automotive.<br>Electronics.<br>Food &amp; beverage.<br>Logistics.<br>Pharmaceuticals.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact" class="gray">
   <div class="s-wrap">
-    <p class="s-label">Get in Touch</p>
-    <h2 class="s-title">Contact</h2>
+    <p class="s-label" data-en="Get in Touch" data-ro="Contactați-ne">Get in Touch</p>
+    <h2 class="s-title" data-en="Contact" data-ro="Contact">Contact</h2>
     <div class="contact-cols">
       <div class="contact-info">
-        <p>Have a project in mind or want to learn more about how Opsistech can help your organization? Reach out — we respond within one business day.</p>
+        <p data-en="Have a project in mind or want to learn more about how Opsistech can help your organization? Reach out — we respond within one business day."
+           data-ro="Aveți un proiect în minte sau doriți să aflați mai multe despre cum vă poate ajuta Opsistech? Contactați-ne — răspundem în cel mult o zi lucrătoare.">
+          Have a project in mind or want to learn more about how Opsistech can help your organization? Reach out — we respond within one business day.</p>
         <div class="cdet">
-          <span class="cdet-label">Email</span>
+          <span class="cdet-label" data-en="Email" data-ro="Email">Email</span>
           <span class="cdet-val" id="contact-email"></span>
         </div>
         <div class="cdet">
-          <span class="cdet-label">Phone</span>
+          <span class="cdet-label" data-en="Phone" data-ro="Telefon">Phone</span>
           <span class="cdet-val">0743 082838</span>
         </div>
       </div>
       <form class="form" id="contact-form">
-        <label>Name</label>
-        <input type="text" id="f-name" placeholder="Your name" maxlength="100">
-        <label>Email</label>
-        <input type="email" id="f-email" placeholder="your@email.com" maxlength="200">
-        <label>Phone</label>
-        <input type="tel" id="f-phone" placeholder="Your phone number" maxlength="20">
-        <label>Message</label>
-        <textarea id="f-message" placeholder="Tell us about your project..." maxlength="2000"></textarea>
-        <button type="submit" id="send-btn">Send Message</button>
-        <p style="font-size:12px;color:var(--mid);margin-top:16px;margin-bottom:0;line-height:1.5;">By submitting this form you agree to our <a href="privacy.html" style="color:var(--black);">Privacy Policy</a>.</p>
+        <label data-en="Name"    data-ro="Nume">Name</label>
+        <input type="text"  id="f-name"    data-placeholder-en="Your name"           data-placeholder-ro="Numele dvs."         placeholder="Your name"           maxlength="100">
+        <label data-en="Email"   data-ro="Email">Email</label>
+        <input type="email" id="f-email"   data-placeholder-en="your@email.com"       data-placeholder-ro="email@dvs.com"        placeholder="your@email.com"       maxlength="200">
+        <label data-en="Phone"   data-ro="Telefon">Phone</label>
+        <input type="tel"   id="f-phone"   data-placeholder-en="Your phone number"    data-placeholder-ro="Numărul dvs. de telefon" placeholder="Your phone number" maxlength="20">
+        <label data-en="Message" data-ro="Mesaj">Message</label>
+        <textarea id="f-message" data-placeholder-en="Tell us about your project..." data-placeholder-ro="Spuneți-ne despre proiectul dvs..." placeholder="Tell us about your project..." maxlength="2000"></textarea>
+        <button type="submit" id="send-btn" data-en="Send Message" data-ro="Trimite Mesaj">Send Message</button>
+        <p style="font-size:12px;color:var(--mid);margin-top:16px;margin-bottom:0;line-height:1.5;">
+          <span data-en='By submitting this form you agree to our' data-ro='Prin trimiterea acestui formular sunteți de acord cu'>By submitting this form you agree to our</span>
+          <a href="privacy.html" style="color:var(--black);" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a>.
+        </p>
       </form>
     </div>
   </div>
@@ -220,21 +275,69 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 <footer>
   <div>
     <div class="f-brand">Opsistech</div>
-    <div class="f-sub">Engineering Vision into Reality</div>
+    <div class="f-sub" data-en="Engineering Vision into Reality" data-ro="Transformăm Viziunea în Realitate">Engineering Vision into Reality</div>
   </div>
   <div class="f-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#home"     data-en="Home"     data-ro="Acasă">Home</a>
+    <a href="#about"    data-en="About"    data-ro="Despre">About</a>
+    <a href="#services" data-en="Services" data-ro="Servicii">Services</a>
+    <a href="#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
   </div>
-  <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="privacy.html" style="color:#b0b0aa;text-decoration:none;">Privacy Policy</a></div>
+  <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="privacy.html" style="color:#b0b0aa;text-decoration:none;" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a></div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn"        id="btn-ro" onclick="setLang('ro')">RO</button>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
 (function() {
 
+  /* ── Language switcher ── */
+  var currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Toggle button states
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ro').classList.toggle('active', lang === 'ro');
+
+    // Update all elements with data-en / data-ro text content
+    document.querySelectorAll('[data-en][data-ro]').forEach(function(el) {
+      // Skip inputs/textareas – placeholders are handled separately
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
+      // Preserve innerHTML for elements that may contain <br> or <a>
+      var val = el.getAttribute('data-' + lang);
+      if (val !== null) el.innerHTML = val;
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-placeholder-en]').forEach(function(el) {
+      el.placeholder = el.getAttribute('data-placeholder-' + lang) || el.getAttribute('data-placeholder-en');
+    });
+
+    // Reset send button if it still shows default label
+    var btn = document.getElementById('send-btn');
+    if (btn && !btn.disabled) {
+      btn.textContent = btn.getAttribute('data-' + lang);
+    }
+
+    // Update <html lang>
+    document.documentElement.lang = lang === 'ro' ? 'ro' : 'en';
+  }
+
+  // Expose globally for onclick
+  window.setLang = setLang;
+
+  // Apply saved language on load
+  setLang(currentLang);
+
+  /* ── EmailJS ── */
   emailjs.init('hGRXPG-mP7R1Pvs8m');
 
   var addr = ['support', 'opsistech.ro'].join('@');
@@ -247,6 +350,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     cel.appendChild(a);
   }
 
+  /* ── Header scroll behaviour ── */
   var header = document.getElementById('site-header');
   var hero   = document.getElementById('home');
 
@@ -258,17 +362,27 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 
+  /* ── Contact form ── */
   var form     = document.getElementById('contact-form');
   var btn      = document.getElementById('send-btn');
   var lastSent = 0;
+
+  var msgs = {
+    wait:    { en: 'Please wait…',      ro: 'Vă rugăm așteptați…' },
+    sending: { en: 'Sending…',          ro: 'Se trimite…' },
+    sent:    { en: 'Message Sent!',     ro: 'Mesaj trimis!' },
+    failed:  { en: 'Failed — Try Again',ro: 'Eroare — Încearcă din nou' },
+    invalid: { en: 'Invalid email',     ro: 'Email invalid' },
+    default: { en: 'Send Message',      ro: 'Trimite Mesaj' }
+  };
 
   form.addEventListener('submit', function(ev) {
     ev.preventDefault();
 
     var now = Date.now();
     if (now - lastSent < 30000) {
-      btn.textContent = 'Please wait...';
-      setTimeout(function() { btn.textContent = 'Send Message'; }, 2000);
+      btn.textContent = msgs.wait[currentLang];
+      setTimeout(function() { btn.textContent = msgs.default[currentLang]; }, 2000);
       return;
     }
 
@@ -280,12 +394,12 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     if (!name || !email || !message) return;
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      btn.textContent = 'Invalid email';
-      setTimeout(function() { btn.textContent = 'Send Message'; }, 2000);
+      btn.textContent = msgs.invalid[currentLang];
+      setTimeout(function() { btn.textContent = msgs.default[currentLang]; }, 2000);
       return;
     }
 
-    btn.textContent = 'Sending...';
+    btn.textContent = msgs.sending[currentLang];
     btn.disabled = true;
     lastSent = now;
 
@@ -295,21 +409,21 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
       phone:   phone,
       message: message
     }).then(function() {
-      btn.textContent = 'Message Sent!';
+      btn.textContent = msgs.sent[currentLang];
       btn.style.background = '#2a7a2a';
       form.reset();
       setTimeout(function() {
-        btn.textContent = 'Send Message';
+        btn.textContent = msgs.default[currentLang];
         btn.style.background = '';
         btn.disabled = false;
       }, 3000);
     }, function() {
-      btn.textContent = 'Failed — Try Again';
+      btn.textContent = msgs.failed[currentLang];
       btn.style.background = '#a02020';
       btn.disabled = false;
       lastSent = 0;
       setTimeout(function() {
-        btn.textContent = 'Send Message';
+        btn.textContent = msgs.default[currentLang];
         btn.style.background = '';
       }, 3000);
     });
@@ -317,5 +431,6 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 
 })();
 </script>
+
 </body>
 </html>
