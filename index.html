@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Opsistech | Soluții Pentru Inspecție Vizuală & Automatizări Industriale România</title>
 <meta name="geo.region" content="RO" />
     <meta name="geo.placename" content="Romania" />
@@ -40,7 +40,7 @@
 }
 html { scroll-behavior: smooth; }
 body { font-family: "Instrument Sans", sans-serif; color: var(--black); background: var(--white); font-size: 16px; line-height: 1.6; }
-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background 0.4s ease, box-shadow 0.4s ease; }
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background 0.4s ease, box-shadow 0.4s ease; padding-top: env(safe-area-inset-top, 0px); }
 header.scrolled { background: var(--white); box-shadow: 0 1px 0 var(--line); }
 .site-wordmark { text-align: center; padding: 22px 40px 14px; transition: padding 0.4s ease; }
 header.shrunk .site-wordmark { padding: 10px 40px 8px; }
