@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://opsistech.ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/ro/"/>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
+    <loc>https://opsistech.ro/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/ro/"/>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://opsistech.ro/privacy.html</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.1</priority>
   </url>
+
 </urlset>
