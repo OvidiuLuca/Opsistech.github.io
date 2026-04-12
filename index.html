@@ -34,6 +34,7 @@
   gtag('config', 'G-T4KCQH1Z2Z');
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="search.css">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -129,7 +130,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 }
 </style>
 </head>
-<body>
+<body class="home-page">
 
 <header id="site-header">
   <div class="site-wordmark">
@@ -142,6 +143,9 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     <a href="#about"    data-en="About"    data-ro="Despre">About</a>
     <a href="#services" data-en="Services" data-ro="Servicii">Services</a>
     <a href="#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
+    <button id="search-toggle" class="search-toggle" aria-label="Search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
   </nav>
 </header>
 
@@ -296,6 +300,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   </div>
 </footer>
 
+<script src="search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 (function() {
